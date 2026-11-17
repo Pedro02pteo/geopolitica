@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dos fechas, un imperio | Foro de respuestas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<header class="portada">
+  <p class="curso">Proyecto de historia contemporánea</p>
+  <h1>Dos fechas, un imperio</h1>
+  <p class="pregunta">¿Cómo la caída de la URSS y la caída de las torres gemelas favorecieron que Estados Unidos terminara de posicionarse como un país imperialista moderno?</p>
+</header>
+
+<main>
+  <section class="linea" aria-labelledby="t-linea">
+    <h2 id="t-linea">Las dos fechas</h2>
+    <div class="ejes" role="tablist" aria-label="Fechas clave">
+      <button role="tab" aria-selected="true" data-ev="1991" class="marca rojo">1991</button>
+      <span class="trazo" aria-hidden="true"></span>
+      <button role="tab" aria-selected="false" data-ev="2001" class="marca ocre">2001</button>
+    </div>
+    <article id="ev-1991" class="evento">
+      <figure><img src="img/urss-1991.jpg" alt="Bandera soviética siendo arriada en el Kremlin" data-nombre="img/urss-1991.jpg"></figure>
+      <div>
+        <h3>Disolución de la URSS</h3>
+        <p>En diciembre de 1991 la Unión Soviética dejó de existir. Terminó el mundo de dos bloques y Estados Unidos quedó sin un rival militar de su tamaño. Ese mismo año, la Guerra del Golfo mostró su capacidad de reunir una coalición y proyectar fuerza lejos de casa.</p>
+      </div>
+    </article>
+    <article id="ev-2001" class="evento" hidden>
+      <figure><img src="img/11s-2001.jpg" alt="Humo sobre el sur de Manhattan el 11 de septiembre de 2001" data-nombre="img/11s-2001.jpg"></figure>
+      <div>
+        <h3>Atentados del 11 de septiembre</h3>
+        <p>Los ataques a las Torres Gemelas y al Pentágono dieron origen a la «guerra contra el terror». Siguieron la invasión de Afganistán (2001), la Ley Patriota y la guerra de Irak (2003), con una presencia militar y de vigilancia que ya no se limitaba a un enemigo estatal.</p>
+      </div>
+    </article>
+  </section>
+
+  <section aria-labelledby="t-resp">
+    <h2 id="t-resp">Respuestas</h2>
+    <div class="filtros" role="group" aria-label="Filtrar respuestas">
+      <button class="chip activo" data-f="todas">Todas</button>
+      <button class="chip" data-f="URSS">Efecto de la URSS</button>
+      <button class="chip" data-f="11-S">Efecto del 11-S</button>
+      <button class="chip" data-f="Crítica">Voces críticas</button>
+    </div>
+    <p id="conteo" class="conteo" aria-live="polite"></p>
+    <div id="lista" class="lista"></div>
+  </section>
+
+  <section class="nueva" aria-labelledby="t-nueva">
+    <h2 id="t-nueva">Agrega tu respuesta</h2>
+    <form id="formulario">
+      <label>Tu nombre <input id="f-autor" required maxlength="40"></label>
+      <label>Tema
+        <select id="f-tema">
+          <option>URSS</option><option>11-S</option><option>Crítica</option>
+        </select>
+      </label>
+      <label>Tu respuesta <textarea id="f-texto" required minlength="30" maxlength="900" rows="5"></textarea></label>
+      <button type="submit" class="boton">Publicar respuesta</button>
+      <p id="aviso" class="aviso" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <h2>Fuentes</h2>
+  <ul>
+    <li>Agrega aquí los libros, artículos y documentos que usaste (formato APA).</li>
+  </ul>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
